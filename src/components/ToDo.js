@@ -52,11 +52,18 @@ const ToDo = ({ list = [], setList }) => {
 
             <hr />
 
-            <div className="list">
-                {
-                    list.map(e => <ToDoItem key={`todo-${e.id}`} todo={e} deleteToDo={setList} />)
-                }
-            </div>
+            {
+                list.length > 0 ? (
+                    <div className="list">
+                        {
+                            list.map(e => <ToDoItem key={`todo-${e.id}`} todo={e} deleteToDo={setList} />)
+                        }
+                    </div>
+                ) : (
+                    <div className='nothing'>You Have NOTHING To Do.</div>
+                )
+            }
+
         </div>
 
 
