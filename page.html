@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+        integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous">
+    </script>
+
+    <style>
+        .to-do-list {
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        .to-do-list header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .list {
+            overflow: auto;
+            max-height: 80vh;
+        }
+
+        .to-do-item {
+            display: flex;
+            align-items: center;
+            border: 1px solid;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            padding: 15px;
+        }
+
+        .to-do-item div:first-child {
+            flex: 1;
+        }
+
+        .to-do-item .note {
+            margin-bottom: 10px;
+        }
+
+        .add-btn:hover {
+            cursor: pointer;
+        }
+
+        .delete-btn {
+            border: none;
+            background-color: #FF4B4B;
+            border-radius: 5px;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .delete-btn:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="to-do-list">
+
+        <header>
+            <h1>To Do List</h1>
+            <div class="add-btn"><i class="fa fa-plus"></i></div>
+        </header>
+
+        <hr>
+
+        <div class="list">
+
+            <div class="to-do-item">
+                <div>
+                    <div class="note">Note content</div>
+                    <div class="time">Time: 2022/06/24 15:30:68</div>
+                </div>
+                <button class="delete-btn">DELETE</button>
+            </div>
+
+            <div class="to-do-item">
+                <div>
+                    <div class="note">Note content</div>
+                    <div class="time">Time: 2022/06/24 15:30:68</div>
+                </div>
+                <button class="delete-btn">DELETE</button>
+            </div>
+            <div class="to-do-item">
+                <div>
+                    <div class="note">Note content</div>
+                    <div class="time">Time: 2022/06/24 15:30:68</div>
+                </div>
+                <button class="delete-btn">DELETE</button>
+            </div>
+            <div class="to-do-item">
+                <div>
+                    <div class="note">Note content</div>
+                    <div class="time">Time: 2022/06/24 15:30:68</div>
+                </div>
+                <button class="delete-btn">DELETE</button>
+            </div>
+            <div class="to-do-item">
+                <div>
+                    <div class="note">Note contentNote contentNote contentNote contentNote contentNote contentNote
+                        contentNote contentNote contentNote contentNote contentNote contentNote content</div>
+                    <div class="time">Time: 2022/06/24 15:30:68</div>
+                </div>
+                <button class="delete-btn">DELETE</button>
+            </div>
+            <div class="to-do-item">
+                <div>
+                    <div class="note">Note content</div>
+                    <div class="time">Time: 2022/06/24 15:30:68</div>
+                </div>
+                <button class="delete-btn">DELETE</button>
+            </div>
+            <div class="to-do-item">
+                <div>
+                    <div class="note">Note content</div>
+                    <div class="time">Time: 2022/06/24 15:30:68</div>
+                </div>
+                <button class="delete-btn">DELETE</button>
+            </div>
+
+            <div class="to-do-item">
+                <div>
+                    <div class="note">Note content</div>
+                    <div class="time">Time: 2022/06/24 15:30:68</div>
+                </div>
+                <button class="delete-btn">DELETE</button>
+            </div>
+            <div class="to-do-item">
+                <div>
+                    <div class="note">Note content</div>
+                    <div class="time">Time: 2022/06/24 15:30:68</div>
+                </div>
+                <button class="delete-btn">DELETE</button>
+            </div>
+            <div class="to-do-item">
+                <div>
+                    <div class="note">Note content</div>
+                    <div class="time">Time: 2022/06/24 15:30:68</div>
+                </div>
+                <button class="delete-btn">DELETE</button>
+            </div>
+            <div class="to-do-item">
+                <div>
+                    <div class="note">Note contentNote contentNote contentNote contentNote contentNote contentNote
+                        contentNote contentNote contentNote contentNote contentNote contentNote content</div>
+                    <div class="time">Time: 2022/06/24 15:30:68</div>
+                </div>
+                <button class="delete-btn">DELETE</button>
+            </div>
+            <div class="to-do-item">
+                <div>
+                    <div class="note">Note content</div>
+                    <div class="time">Time: 2022/06/24 15:30:68</div>
+                </div>
+                <button class="delete-btn">DELETE</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
