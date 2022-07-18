@@ -1,0 +1,28 @@
+.to-do-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+.to-do-item div:first-child {
+    flex: 1;
+}
+
+.to-do-item .note {
+    margin-bottom: 10px;
+}
+
+.delete-btn {
+    border: none;
+    background-color: #FF4B4B;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+}
+
+.delete-btn:hover {
+    cursor: pointer;
+}

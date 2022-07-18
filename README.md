@@ -1,28 +1,16 @@
-# Getting Started with Create React App
+# A Simple To-Do Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Demo](https://michael0423.github.io/react-to-do-list/)
+## Built With
 
-## Available Scripts
++ [React](https://reactjs.org/)
++ [Redux](https://redux.js.org/)
 
-In the project directory, you can run:
+<!--
+## Deploy project to github page
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-### `npm run deploy` will deploy this project to github page
+`npm run deploy` will deploy this project to github page
 
 Run this command wiil deploy this project to github page.
 You can follow [this page](https://github.com/gitname/react-gh-pages) to know more detail.
+-->

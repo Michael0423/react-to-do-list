@@ -1,4 +1,8 @@
 import { useState } from 'react'
+
+import store from './store'
+import { Provider } from 'react-redux'
+
 import './App.css';
 import ToDo from './components/ToDo';
 
@@ -10,11 +14,13 @@ function App() {
       time: '2022-06-01'
     }
   ]);
-  
+
   return (
-    <div className="App">
-      <ToDo list={list} setList={setList}></ToDo>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <ToDo list={list} setList={setList}></ToDo>
+      </div>
+    </Provider>
   );
 }
 

@@ -1,7 +1,14 @@
 import { useState } from 'react'
 import ToDoItem from './ToDoItem'
+import './ToDo.style.css'
+
+import { useSelector, useDispatch } from 'react-redux'
+import { login, logout } from '../reducer/LoginReducer'
 
 const ToDo = ({ list = [], setList }) => {
+    const isLogin = useSelector((state) => state.isLogin.value)
+    const dispatch = useDispatch()
+
     const [addStatus, setStatus] = useState(false);
     const [note, setNote] = useState('');
     const [date, setDate] = useState('');
@@ -44,9 +51,21 @@ const ToDo = ({ list = [], setList }) => {
     return (<>
         <div className="to-do-list">
             <header>
-                <h1>To Do List</h1>
-                <div className="add-btn" onClick={addToDo}>
-                    <i className='fa fa-plus' />
+                <div className='log-btn'>
+                    {
+                        !isLogin
+                            ? <input type="button" value="Login" onClick={() => dispatch(login())} />
+                            : <input type="button" value="Logout" onClick={() => dispatch(logout())} />
+                    }
+                </div>
+                <div className="header">
+                    <h1>To Do List</h1>
+                    {
+                        isLogin &&
+                        <div className="add-btn" onClick={addToDo}>
+                            <i className='fa fa-plus' />
+                        </div>
+                    }
                 </div>
             </header>
 

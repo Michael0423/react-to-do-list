@@ -1,4 +1,10 @@
+import './ToDoItem.style.css'
+
+import { useSelector } from 'react-redux'
+
 const ToDoItem = ({ todo, deleteToDo }) => {
+    const isLogin = useSelector((state) => state.isLogin.value)
+
     const { id, note, date, time } = todo
 
     const deleteItem = () => {
@@ -12,7 +18,10 @@ const ToDoItem = ({ todo, deleteToDo }) => {
             <div className="note">{ note }</div>
             <div className="time">Time: { date } { time }</div>
         </div>
-        <button className="delete-btn" onClick={deleteItem}>DELETE</button>
+        {
+            isLogin &&
+            <button className="delete-btn" onClick={deleteItem}>DELETE</button>
+        }
     </div>)
 }
 
