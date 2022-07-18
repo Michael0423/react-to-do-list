@@ -8,9 +8,9 @@ export const loginSlice = createSlice({
     },
     reducers: {
         login: (state) => {
-            Promise.resolve(firebase.login()).then(rs => {
-                console.log(rs);  
-            });
+            // Promise.resolve(firebase.login()).then(rs => {
+            //     console.log(rs);  
+            // });
               
             state.value = true;
         },

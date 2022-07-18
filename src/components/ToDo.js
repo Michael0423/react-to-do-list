@@ -58,13 +58,13 @@ const ToDo = ({ list = [], setList }) => {
     return (<>
         <div className="to-do-list">
             <header>
-                <div className='log-btn'>
+                {/* <div className='log-btn'>
                     {
                         !isLogin
                             ? <input type="button" value="Login" onClick={() => dispatch(login())} />
                             : <input type="button" value="Logout" onClick={() => dispatch(logout())} />
                     }
-                </div>
+                </div> */}
                 <div className="header">
                     <h1>To Do List</h1>
                     {

@@ -1,10 +1,12 @@
 # A Simple To-Do Application
 
 [Demo](https://michael0423.github.io/react-to-do-list/)
+
 ## Built With
 
 + [React](https://reactjs.org/)
 + [Redux](https://redux.js.org/)
++ [Firebase](https://firebase.google.com/)
 
 <!--
 ## Deploy project to github page
