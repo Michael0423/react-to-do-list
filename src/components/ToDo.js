@@ -5,6 +5,8 @@ import './ToDo.style.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { login, logout } from '../reducer/LoginReducer'
 
+import * as firebaseAPI from "../firebaseAPI"
+
 const ToDo = ({ list = [], setList }) => {
     const isLogin = useSelector((state) => state.isLogin.value)
     const dispatch = useDispatch()
@@ -35,18 +37,23 @@ const ToDo = ({ list = [], setList }) => {
     }
 
     const addItem = () => {
-        setList((pre) => {
-            return [
-                {
-                    id: Date.now(),
-                    note,
-                    date,
-                    time
-                },
-                ...pre
-            ]
-        })
-        closeAddDialog()
+        const newTodo = {
+            id: Date.now(),
+            note,
+            date,
+            time
+        };
+        Promise.resolve(firebaseAPI.addToDo(newTodo)).then(()=> {
+            setList((pre) => {
+                console.log(pre);
+                return [
+                    newTodo,
+                    ...pre
+                ]
+            })
+            closeAddDialog()
+        });
+        
     }
     return (<>
         <div className="to-do-list">

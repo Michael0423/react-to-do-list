@@ -2,15 +2,19 @@ import './ToDoItem.style.css'
 
 import { useSelector } from 'react-redux'
 
+import * as firebaseAPI from '../firebaseAPI'
+
 const ToDoItem = ({ todo, deleteToDo }) => {
     const isLogin = useSelector((state) => state.isLogin.value)
 
-    const { id, note, date, time } = todo
+    const { key, id, note, date, time } = todo
 
     const deleteItem = () => {
-        deleteToDo((pre) => {
-            return pre.filter(e => e.id !== id)
-        })
+        firebaseAPI.removeToDo(key).then(() => {
+            deleteToDo((pre) => {
+                return pre.filter(e => e.id !== id)
+            })
+        })        
     }
 
     return (<div className="to-do-item">
