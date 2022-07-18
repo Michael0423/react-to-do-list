@@ -60,7 +60,6 @@ export async function getToDoList() {
         } else {
             console.log("No data available");
         }
-        console.log(result);
         return result;
     }).catch((error) => {
         console.error(error);
@@ -75,6 +74,5 @@ export async function addToDo(todo) {
 
 export async function removeToDo(id) {
     const todoRef = ref(database, `todos/${id}`);
-    console.log(id);
     return await remove(todoRef)
 }
